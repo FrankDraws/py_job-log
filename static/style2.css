@@ -1,0 +1,103 @@
+/*
+    Stylesheet for job-details.html of the Job App.
+
+*/
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: gainsboro;
+}
+@media (min-width: 768px) {
+    body {
+        display: grid;
+        place-items: center;
+        justify-items: center;
+        width: 100vw;
+        height: 100vh;
+        resize: both;
+        margin-top: -10%;
+    }
+}
+
+/* Titles  */
+h1 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Content  */
+#job-details-container {
+    background-color: #fff;
+    margin: 1.3em;
+    padding: 1.3em 1.3em 2.4em;
+    border-radius: 20px;
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.3);
+    /* max-width: 80ch; */
+    /* min-width: 30vw; */
+    /* outline: 1px solid red; */
+}
+#job-details-container p {
+    padding: 0;
+    margin: 0 0 0.7em;
+}
+button {
+    /* font-weight: 700; */
+    /* font-size: 1.125rem; */
+    background-color: #9e9e9e;
+    color: #fff;
+    text-align: center;
+    border-radius: .3125rem;
+    letter-spacing: .1rem;
+    min-height: 2.5rem;
+    border: none;
+    padding: .625rem 1.25rem;
+    outline: none;
+    cursor: pointer;
+    margin-top: 3em;
+}
+
+/* 
+  Font Clamp  
+  https://piccalil.li/tutorial/fluid-typography-with-css-clamp/
+*/
+h1,
+h2,
+h3,
+p {
+    font-size: clamp(var(--fluid-type-min, 1rem),
+            calc(1rem + var(--fluid-type-target, 3vw)),
+            var(--fluid-type-max, 1.3rem));
+}
+
+h1 {
+    --fluid-type-min: 1.5rem;
+    --fluid-type-max: 2.5rem;
+    --fluid-type-target: 5vw;
+
+    max-width: 30ch;
+}
+
+h2 {
+    --fluid-type-min: 1.8rem;
+    --fluid-type-max: 3rem;
+}
+
+h3 {
+    --fluid-type-min: 1.5rem;
+    --fluid-type-max: 2.5rem;
+}
+
+h2,
+h3 {
+    max-width: 30ch;
+}
+
+p {
+    max-width: 60ch;
+    line-height: 1.8;
+}

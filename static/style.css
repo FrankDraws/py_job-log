@@ -1,0 +1,95 @@
+/*
+    Stylesheet for index.html of the Job App.
+
+*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #fff;
+
+}
+
+/* Titles  */
+h1 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+section {
+    margin: 1.3em;
+}
+/* Content  */
+@media (min-width: 768px) {
+    body {
+        display: grid;
+        place-items: center;
+        width: 100vw;
+        height: 100vh;
+        resize: both;
+        background-color: #fff;
+        padding: 1em;
+        margin-top: -10%;
+    }
+    section {
+        /* outline: 1px solid red; */
+        width: 80ch;
+        }
+    li {
+        width: 70ch;
+    }
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    background: #e7e7e7;
+    padding: 1em;
+    border-radius: 0.7em;
+    cursor: pointer;
+    margin: 0 0 1.5em 0;
+    list-style: none;
+}
+
+
+/* 
+  Font Clamp  
+  https://piccalil.li/tutorial/fluid-typography-with-css-clamp/
+*/
+h1,
+h2,
+h3,
+p {
+    font-size: clamp(var(--fluid-type-min, 1rem),
+            calc(1rem + var(--fluid-type-target, 3vw)),
+            var(--fluid-type-max, 1.3rem));
+}
+
+h1 {
+    --fluid-type-min: 1.5rem;
+    --fluid-type-max: 2.5rem;
+    --fluid-type-target: 5vw;
+
+    max-width: 30ch;
+}
+
+h2 {
+    --fluid-type-min: 1.8rem;
+    --fluid-type-max: 3rem;
+}
+
+h3 {
+    --fluid-type-min: 1.5rem;
+    --fluid-type-max: 2.5rem;
+}
+
+h2,
+h3 {
+    max-width: 30ch;
+}
+
+p {
+    max-width: 60ch;
+    line-height: 1.8;
+}
