@@ -1,0 +1,2 @@
+# Python Job Application Log
+Unlike the original web app that's static, this is my attempt at creating a Python version of it. This was prompted when I asked ChatGPT if I could take the existing app, input data, and have it write to the existing `data.json` file (as opposed to creating an `SQLite` database).
