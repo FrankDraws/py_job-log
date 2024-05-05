@@ -42,8 +42,11 @@ def log_data():
 
 @app.route('/job-details')
 def job_details():
-    # Logic to display individual job details can be added here
-    return render_template('job-details.html')
+    # ... (logic to retrieve job data if needed)
+    job_data = {...}  # Replace with retrieved data
+    print(job_data)  # Add this line
+    return render_template('job-details.html', job_data=job_data)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
