@@ -19,6 +19,7 @@ h1 {
 }
 section {
     margin: 1.3em;
+    
 }
 /* Content  */
 @media (min-width: 768px) {
@@ -32,12 +33,18 @@ section {
         padding: 1em;
         /* margin-top: -10%; */
     }
-    section {
-        /* outline: 1px solid red; */
+    #job-app {
+        /* outline: 1px solid green; */
         width: 80ch;
         }
     li {
         width: 70ch;
+    }
+    #form {
+        width: max-content;
+        /* outline: 1px solid orange; */
+        display: grid;
+        place-items: center;
     }
 }
 ul {
@@ -51,6 +58,7 @@ li {
     cursor: pointer;
     margin: 0 0 1.5em 0;
     list-style: none;
+    width: 50ch;
 }
 
 a, a:visited {
@@ -102,4 +110,50 @@ h3 {
 p {
     max-width: 60ch;
     line-height: 1.8;
+}
+
+/*
+    Accordion
+*/
+.accordion {
+    width: 70ch;
+    margin: 0 auto;
+    /* outline: 1px solid red; */
+}
+
+.accordion-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header h3 {
+    margin: 0;
+}
+
+.accordion-icon {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    padding: 20px;
+    display: none;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
 }
