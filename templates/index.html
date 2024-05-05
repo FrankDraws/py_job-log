@@ -9,48 +9,20 @@
     <title>Job Application Log</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 <style>
-    /* CSS for fading in */
-    /* body {
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-    }
 
-    body.show {
-        opacity: 1;
-    } */
 </style>
 </head>
 <body>
     <section id="form">
-        <form
-            id="job-form"
-            method="POST"
-            action="{{ url_for('log_data') }}"
-        >
+        <form id="job-form" method="POST" action="{{ url_for('log_data') }}">
             <label for="company">Company:</label>
-            <input
-                type="text"
-                id="company"
-                name="company"
-                required
-            ><br><br>
+            <input type="text" id="company" name="company" required><br><br>
         
             <label for="position">Position:</label>
-            <input
-                type="text"
-                id="position"
-                name="position"
-                required
-            ><br><br>
+            <input type="text" id="position" name="position" required><br><br>
         
             <label for="description">Description:</label><br>
-            <textarea
-                id="description"
-                name="description"
-                rows="4"
-                cols="50"
-                required
-            ></textarea><br><br>
+            <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
         
             <button type="submit">Add Job</button>
         </form>
@@ -64,9 +36,7 @@
         </ul> -->
         <ul>
             {% for job in job_data %}
-            <li>
-                <a href="{{ url_for('job_details') }}">{{ job['company'] }} - {{
-                    job['position'] }}</a>
+            <li><span class="job-date">{{ job['date'] }} -</span> <a href="{{ url_for('job_details') }}">{{ job['company'] }}</a>
             </li>
             {% endfor %}
         </ul>
@@ -75,9 +45,7 @@
 
 
     
-    <!-- <div id="job-details"></div> -->
 
-<!-- <script src="script04.js"></script> -->
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 
