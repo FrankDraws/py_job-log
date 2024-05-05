@@ -23,8 +23,43 @@
 <body>
     <section>
         <h1>Job Application Log</h1>
-        <ul id="job-list"></ul>
+       
     </section>
+    <ul id="job-list">
+        {% for job in job_data %}
+        <li>{{ job.date }} / {{ job.company }} / {{ job.position }} / {{
+            job.description }}</li>
+        {% endfor %}
+    </ul>
+
+    <form id="job-form" method="POST" action="{{ url_for('log_data') }}">
+        <label for="company">Company:</label>
+        <input
+            type="text"
+            id="company"
+            name="company"
+            required
+        ><br><br>
+    
+        <label for="position">Position:</label>
+        <input
+            type="text"
+            id="position"
+            name="position"
+            required
+        ><br><br>
+    
+        <label for="description">Description:</label><br>
+        <textarea
+            id="description"
+            name="description"
+            rows="4"
+            cols="50"
+            required
+        ></textarea><br><br>
+    
+        <button type="submit">Add Job</button>
+    </form>
     
     <!-- <div id="job-details"></div> -->
 

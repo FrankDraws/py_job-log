@@ -1,0 +1,50 @@
+[
+    {
+        "date": "May 1, 2024",
+        "company": "Wendover Art Group, Largo, FL",
+        "position": "Art Consultant",
+        "description": "Consulting and curating for an art company."
+    },
+    {
+        "date": "May 1, 2024",
+        "company": "Universal Destinations & Experiences",
+        "position": "Creative Technologist ",
+        "description": "With ATI/R&D at UniCreative."
+    },
+    {
+        "date": "May 3, 2024",
+        "company": "Virtability",
+        "position": "Freelance",
+        "description": "Local agency. I emailed Alyssa (Raiford) Sevener and offered to collaborate."
+    },
+    {
+        "date": "May 5, 2024",
+        "company": "Corp",
+        "position": "ceo",
+        "description": "Hello."
+    },
+    {
+        "date": "May 5, 2024",
+        "company": "Another",
+        "position": "Director",
+        "description": "Another description."
+    },
+    {
+        "date": "May 05, 2024",
+        "company": "Small Biz",
+        "position": "Director.",
+        "description": "Another summary."
+    },
+    {
+        "date": "May 05, 2024",
+        "company": "Sunday",
+        "position": "Leader",
+        "description": "Summary."
+    },
+    {
+        "date": "May 05, 2024",
+        "company": "Sunday Too",
+        "position": "Manager",
+        "description": "This is a short blurb."
+    }
+]
