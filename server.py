@@ -4,6 +4,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
+# Root/Home
 @app.route('/')
 def index():
     try:
@@ -14,6 +15,12 @@ def index():
 
     return render_template('index.html', job_data=job_data)
 
+# form.html
+@app.route('/form')
+def form():
+    return render_template('form.html')
+
+# The form itself
 @app.route('/log_data', methods=['POST'])
 def log_data():
     data = {
@@ -39,7 +46,7 @@ def log_data():
 
     return render_template('success.html', message="Job application logged successfully!")
 
-
+# job-details.html
 @app.route('/job-details')
 def job_details():
     # ... (logic to retrieve job data if needed)
