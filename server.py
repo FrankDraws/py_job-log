@@ -47,12 +47,18 @@ def log_data():
     return render_template('success.html', message="Job application logged successfully!")
 
 # job-details.html
-@app.route('/job-details')
-def job_details():
-    # ... (logic to retrieve job data if needed)
-    job_data = {...}  # Replace with retrieved data
-    print(job_data)  # Add this line
-    return render_template('job-details.html', job_data=job_data)
+@app.route('/job-details/<int:index>')
+def job_details(index):
+    try:
+        # Load data from JSON file
+        with open('data/data.json', 'r') as file:
+            job_data = json.load(file)
+        if index < len(job_data):
+            return render_template('job-details.html', job_data=job_data[index])
+        else:
+            return render_template('job-details.html', job_data={})
+    except FileNotFoundError:
+        return render_template('job-details.html', job_data={})
 
 
 if __name__ == "__main__":

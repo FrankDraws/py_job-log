@@ -16,23 +16,17 @@
     <section id="job-app">
         <a href="{{ url_for('form')}}">Enter job information</a>
         <h1>Job Application Log</h1>
-        <!-- <ul id="job-list">
-            {% for job in job_data %}
-            <li>{{ job.date }} / {{ job.company }}</li>
-            {% endfor %}
-        </ul> -->
+
         <ul>
             {% for job in job_data %}
-            <li><span class="job-date">{{ job['date'] }} -</span> <a href="{{ url_for('job_details') }}">{{ job['company'] }}</a>
-            </li>
+            <li><span class="job-date">{{ job['date'] }} -</span> <a
+                    href="{{ url_for('job_details', index=loop.index0) }}"
+                >{{ job['company'] }}</a></li>
             {% endfor %}
         </ul>
 
     </section>
     
-
-<script src="{{ url_for('static', filename='script.js') }}"></script>
-
 
 </body>
 </html>
