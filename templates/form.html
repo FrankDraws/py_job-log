@@ -9,20 +9,20 @@
 <body id="fbg">
     <section id="form">
         <form id="job-form" method="POST" action="{{ url_for('log_data') }}">
-            <label for="company">Company:</label>
-            <input type="text" id="company" name="company" required><br><br>
+            <!-- <label for="company">Company:</label> -->
+            <input type="text" id="company" name="company" placeholder="Company" required><br><br>
     
-            <label for="position">Position:</label>
-            <input type="text" id="position" name="position" required><br><br>
+            <!-- <label for="position">Position:</label> -->
+            <input type="text" id="position" name="position" placeholder="Position" required><br><br>
     
-            <label for="description">Description:</label><br>
-            <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+            <!-- <label for="description">Description:</label><br> -->
+            <textarea id="description" placeholder="Description" name="description" rows="4" cols="50" required></textarea><br><br>
     
             <button id="submit" type="submit">Add Job</button>
         </form>
     <div>
         {% with index_url = url_for('index') %}
-        <button class="primary" onclick="window.location.href='{{ index_url }}'">Home</button>
+        <button class="btnPrimary" onclick="window.location.href='{{ index_url }}'">Home</button>
         {% endwith %}
     </div>
     </section>
