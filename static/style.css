@@ -21,21 +21,32 @@ body {
         align-content: start;
         row-gap: 3em;
 }
+#successPg {
+    background: hsla(137, 81%, 69%, 1);
+    
+        background: linear-gradient(315deg, hsla(137, 81%, 69%, 1) 0%, hsla(120, 87%, 37%, 1) 100%);
+    
+        background: -moz-linear-gradient(315deg, hsla(137, 81%, 69%, 1) 0%, hsla(120, 87%, 37%, 1) 100%);
+    
+        background: -webkit-linear-gradient(315deg, hsla(137, 81%, 69%, 1) 0%, hsla(120, 87%, 37%, 1) 100%);
+    
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#71F095", endColorstr="#0CAF0C", GradientType=1);
+}
 #formPg, #detailsPg {
     /* background-color: gainsboro; */
     display: grid;
     align-content: start;
     row-gap: 3em;
 
-    background: hsla(213, 62%, 45%, 1);
+    background: hsla(18, 76%, 85%, 1);
     
-    background: linear-gradient(90deg, hsla(213, 62%, 45%, 1) 0%, hsla(203, 89%, 71%, 1) 50%, hsla(0, 0%, 96%, 1) 100%);
-
-    background: -moz-linear-gradient(90deg, hsla(213, 62%, 45%, 1) 0%, hsla(203, 89%, 71%, 1) 50%, hsla(0, 0%, 96%, 1) 100%);
-
-    background: -webkit-linear-gradient(90deg, hsla(213, 62%, 45%, 1) 0%, hsla(203, 89%, 71%, 1) 50%, hsla(0, 0%, 96%, 1) 100%);
-
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#2C6CBC", endColorstr="#71C3F7", GradientType=1);
+        background: linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+    
+        background: -moz-linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+    
+        background: -webkit-linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+    
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F6CFBE", endColorstr="#B9DCF2", GradientType=1);
 }
 
 .wrapper {
@@ -58,6 +69,24 @@ body {
     /* padding: 4em; */
     background-color: #e7e7e7;
 }
+.success {
+    width: 50px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+h3 {
+    color: #0caf0c;
+    margin: 0;
+    padding: 0 0 1em 0;
+}
+.material-symbols-outlined {
+    color: #0caf0c;
+    font-size: 30px !important;
+    margin-right: 0.4em;
+}
+
+
 /* 
     Titles  
 */
