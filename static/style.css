@@ -1,55 +1,52 @@
 /*
-    Stylesheet for index.html of the Job App.
-
+    Name: Python Job Application Log
+    Author: Frank J. Quinones
 */
 
-body, html {
+/*
+    Global
+*/
+html,
+body {
+    height: 100%;
     margin: 0;
     padding: 0;
-}
-body {
+    box-sizing: border-box;
+    
     background-color: #fff;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#fbg {
+    /* background-color: gainsboro; */
+    display: grid;
+    align-content: start;
+    row-gap: 3em;
+
+    background: hsla(213, 62%, 45%, 1);
+    
+    background: linear-gradient(90deg, hsla(213, 62%, 45%, 1) 0%, hsla(203, 89%, 71%, 1) 50%, hsla(0, 0%, 96%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(213, 62%, 45%, 1) 0%, hsla(203, 89%, 71%, 1) 50%, hsla(0, 0%, 96%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(213, 62%, 45%, 1) 0%, hsla(203, 89%, 71%, 1) 50%, hsla(0, 0%, 96%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#2C6CBC", endColorstr="#71C3F7", GradientType=1);
+}
+/* 
+    Titles  
+*/
+#fbg h1 {
+    /* outline: 1px solid red; */
+    margin: 3em 0 0;
 
 }
-#fbg {
-    background-color: gainsboro;
-}
-/* Titles  */
 h1 {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 section {
     margin: 1.3em;
     
-}
-/* Content  */
-@media (min-width: 768px) {
-    body {
-        display: grid;
-        place-items: center;
-        width: 100vw;
-        height: 100vh;
-        resize: both;
-        background-color: #fff;
-        padding: 1em;
-        /* margin-top: -10%; */
-    }
-    #job-app {
-        /* outline: 1px solid green; */
-        width: 80ch;
-        }
-    li {
-        width: 70ch;
-    }
-    #form {
-        width: max-content;
-        /* outline: 1px solid orange; */
-        display: grid;
-        place-items: center;
-        padding: 2.5em;
-        border-radius: 20px;
-    }
 }
 ul {
     margin: 0;
@@ -64,8 +61,8 @@ li {
     list-style: none;
     width: 50ch;
 }
-
-a, a:visited {
+a,
+a:visited {
     color: #ff6b6b;
     text-decoration: none;
     border-bottom: 1px solid #ff6b6b;
@@ -73,44 +70,6 @@ a, a:visited {
 }
 .job-date {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-/* 
-    Form
-*/
-#form {
-    /* outline: 1px solid red; */
-    background-color: white;
-    display: flex;
-    flex-flow: column wrap;
-    box-shadow: 3px 25px 40px rgba(0, 0, 0, 0.3);
-}
-#form > div {
-    width: 50%;
-    margin-top: 5em;
-}
-form input {
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-    font-family: 'Helvetica', sans-serif;
-}
-form textarea {
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    height: 150px;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-    font-family: 'Helvetica', sans-serif;
 }
 .btnPrimary {
     /* outline: 1px solid orange; */
@@ -140,6 +99,77 @@ form textarea {
     -webkit-user-select: none;
     touch-action: manipulation;
     width: 100%;
+}
+/* 
+    Responsive  
+*/
+@media (min-width: 768px) {
+    body {
+        display: grid;
+        place-items: center;
+        /* width: 100%;
+        height: 100%; */
+        /* resize: both; */
+        background-color: #fff;
+        padding: 1em;
+        /* margin-top: -10%; */
+    }
+    #job-app {
+        /* outline: 1px solid green; */
+        width: 80ch;
+        }
+    li {
+        width: 70ch;
+    }
+    #form {
+        width: max-content;
+        /* outline: 1px solid orange; */
+        display: grid;
+        place-items: center;
+        padding: 2.5em;
+        border-radius: 20px;
+    }
+}
+
+/* 
+    Form
+*/
+#form {
+    /* outline: 1px solid red; */
+    background-color: white;
+    display: flex;
+    flex-flow: column wrap;
+    box-shadow: 3px 25px 40px rgba(0, 0, 0, 0.3);
+}
+#form input, #form textarea {
+    border-radius: 8px;
+}
+#form > div {
+    width: 50%;
+    margin-top: 5em;
+}
+form input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Helvetica', sans-serif;
+}
+form textarea {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    height: 150px;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Helvetica', sans-serif;
 }
 #submit {
     appearance: none;
