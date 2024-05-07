@@ -48,14 +48,14 @@ body {
 }
 
 .wrapper > div {
-    width: 100%;
+    /* width: 100%; */
     margin-top: 5em;
     display: grid;
     place-items: center;
 }
 #indexPg>.wrapper {
     box-shadow: none;
-    padding: 4em;
+    /* padding: 4em; */
     background-color: #e7e7e7;
 }
 /* 
@@ -76,11 +76,16 @@ ul {
 }
 li {
     /* background: #e7e7e7; */
-    padding: 1em;
-    border-radius: 0.7em;
-    cursor: pointer;
+    /* border-radius: 0.7em; */
     /* margin: 0 0 1.5em 0; */
+    padding: 0 0 1.5em 0;
+    cursor: pointer;
     list-style: none;
+    width: 30ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 #linkToForm {
     padding: 1em;
