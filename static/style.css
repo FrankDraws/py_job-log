@@ -16,7 +16,11 @@ body {
     background-color: #fff;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-
+#indexPg {
+    display: grid;
+        align-content: start;
+        row-gap: 3em;
+}
 #formPg, #detailsPg {
     /* background-color: gainsboro; */
     display: grid;
@@ -49,14 +53,15 @@ body {
     display: grid;
     place-items: center;
 }
+#indexPg>.wrapper {
+    box-shadow: none;
+    padding: 4em;
+    background-color: #e7e7e7;
+}
 /* 
     Titles  
 */
-#formPg h1 {
-    /* outline: 1px solid red; */
-    margin: 3em 0 0;
 
-}
 h1 {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     margin: 1em;
@@ -70,12 +75,19 @@ ul {
     padding: 0;
 }
 li {
-    background: #e7e7e7;
+    /* background: #e7e7e7; */
     padding: 1em;
     border-radius: 0.7em;
     cursor: pointer;
-    margin: 0 0 1.5em 0;
+    /* margin: 0 0 1.5em 0; */
     list-style: none;
+}
+#linkToForm {
+    padding: 1em;
+    background-color: #fafafa;
+    margin: 0 0 2em 0;
+    display: block;
+    border-radius: 10px;
 }
 a,
 a:visited {

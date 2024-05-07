@@ -17,11 +17,10 @@
 
 </style>
 </head>
-<body>
+<body id="indexPg">
+    <h1>Job Application Log</h1>
     <section class="wrapper">
-        <a href="{{ url_for('form')}}">Enter job information</a>
-        <h1>Job Application Log</h1>
-
+        <div id="linkToForm"><a href="{{ url_for('form')}}">Enter job information</a></div>
         <ul>
             {% for job in job_data %}
             <li><span class="job-date">{{ job['date'] }} -</span> <a
