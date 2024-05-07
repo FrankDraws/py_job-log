@@ -7,22 +7,20 @@
         content="width=device-width, initial-scale=1.0"
     >
     <title>Job Details</title>
-    <link
-        rel="stylesheet"
-        type="text/css"
-        href="{{ url_for('static', filename='style2.css') }}"
-    >
+    <link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='style.css') }}" >
 </head>
-<body id="details">
+<body id="detailsPg">
 
-    <div id="job-details-container" class="fade-in">
-        <h1>Job Application Details</h1>
+    <h1>Job Application Details</h1>
+    <section class="wrapper">
         <p>Company: {{ job_data['company'] }}</p>
         <p>Position: {{ job_data['position'] }}</p>
         <p>Description: {{ job_data['description'] }}</p>
-        {% with index_url = url_for('index') %}
-        <button onclick="window.location.href='{{ index_url }}'">Home</button>
-        {% endwith %}
-    </div>
+        <div>
+            {% with index_url = url_for('index') %}
+            <button class="btnPrimary" onclick="window.location.href='{{ index_url }}'">Home</button>
+            {% endwith %}
+        </div>
+    </section>
 </body>
 </html>
